@@ -3,6 +3,7 @@ import Home from './Home';
 import Create from './Create';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BlogDetails from './BlogDetails';
+import ErrorPage from './Error';
 
 function App() {
   
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id"> 
               <BlogDetails />
+            </Route>
+            <Route path="*">
+              <ErrorPage />
             </Route>
          </Switch>
         </div>
